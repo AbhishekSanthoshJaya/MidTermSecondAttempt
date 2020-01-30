@@ -2,11 +2,13 @@ import java.util.ArrayList;
 
 public class MidTermSecondAttempt {
     public static void main(String[] args) {
-        String[] main = new String[]{"Welcome to Canada"};
+        String[] main = new String[]{"Weeeeee are the champions"};
+        String main2 = "Weeeeeeee are the champions";
         MidTermSecondAttempt obj1 = new MidTermSecondAttempt();
-        for (int i = 0; i < main.length; i++) {
-            System.out.println(obj1.reverseSentence(main[i]));
-        }
+       // for (int i = 0; i < main.length; i++) {
+            //System.out.println(obj1.reverseSentence(main[i]));
+       // }
+        System.out.println(obj1.mostFrequent(main2));
     }
         public String reverseSentence (String s){
            /* //ArrayList<String> newWords= new ArrayList<>();
@@ -33,5 +35,26 @@ public class MidTermSecondAttempt {
                finalString += " " + newWords[i];
            }
            return finalString;
+        }
+
+        public char mostFrequent(String s){
+        char[] t = s.toCharArray();
+        int i = 0;
+        int[] count = new int[200];
+        int max = 0;
+        for(i =0; i<t.length-1; i++){
+            for(int j =i+1; j<t.length-1; j++){
+
+                if (t[i] == t[j]){
+                    max = count[i];
+                    count[i]++;
+
+                    if(count[i] > max){
+                        max = count[i];
+                    }
+                }
+            }
+        }
+        return s.charAt(max);
         }
     }
