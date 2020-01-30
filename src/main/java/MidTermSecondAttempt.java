@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class MidTermSecondAttempt {
     public static void main(String[] args) {
         String[] main = new String[]{"Weeeeee are the champions"};
-        String main2 = "Weeeeeeee are the champions";
+        String main2 = "WWWWWWWWWWWWWWWWWWWWWWWWWWee are the champions";
         MidTermSecondAttempt obj1 = new MidTermSecondAttempt();
        // for (int i = 0; i < main.length; i++) {
             //System.out.println(obj1.reverseSentence(main[i]));
@@ -42,13 +42,11 @@ public class MidTermSecondAttempt {
         int i = 0;
         int[] count = new int[200];
         int max = 0;
-        for(i =0; i<t.length-1; i++){
-            for(int j =i+1; j<t.length-1; j++){
-
+        for(i =0; i<=t.length; i++){
+            for(int j =i+1; j<t.length; j++){
                 if (t[i] == t[j]){
                     max = count[i];
                     count[i]++;
-
                     if(count[i] > max){
                         max = count[i];
                     }
